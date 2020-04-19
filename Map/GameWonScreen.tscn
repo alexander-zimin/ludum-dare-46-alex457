@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/BaseTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Map/GameWonScreen.cs" type="Script" id=2]
+[ext_resource path="res://Images/PlantWin.tres" type="Texture" id=3]
+
+[node name="GameWonScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -200.0
+margin_right = 400.0
+margin_bottom = 200.0
+
+[node name="VSplit" type="VBoxContainer" parent="Panel"]
+margin_right = 800.0
+margin_bottom = 400.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Center2" type="CenterContainer" parent="Panel/VSplit"]
+margin_right = 800.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 800, 200 )
+
+[node name="Plant" type="TextureRect" parent="Panel/VSplit/Center2"]
+margin_left = 400.0
+margin_top = 100.0
+margin_right = 400.0
+margin_bottom = 100.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 4
+
+[node name="Center" type="CenterContainer" parent="Panel/VSplit"]
+margin_top = 204.0
+margin_right = 800.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 800, 0 )
+size_flags_vertical = 3
+
+[node name="Text" type="Label" parent="Panel/VSplit/Center"]
+margin_left = 357.0
+margin_top = 86.0
+margin_right = 442.0
+margin_bottom = 109.0
+text = "Victory text"

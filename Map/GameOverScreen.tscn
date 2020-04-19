@@ -1,18 +1,23 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/BaseTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Map/GameOverScreen.cs" type="Script" id=2]
 
 [node name="GameOverScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -321.0
-margin_top = -218.5
-margin_right = 321.0
-margin_bottom = 218.5
+margin_left = -400.0
+margin_top = -200.0
+margin_right = 400.0
+margin_bottom = 200.0
 
 [node name="Label" type="Label" parent="Panel"]
 anchor_left = 0.5
@@ -24,3 +29,15 @@ margin_top = -7.0
 margin_right = 38.5
 margin_bottom = 7.0
 text = "Game Over!"
+
+[node name="Restart" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -90.5
+margin_top = -137.0
+margin_right = 90.5
+margin_bottom = -117.0
+text = "Restart"
+[connection signal="pressed" from="Panel/Restart" to="." method="_on_Restart_pressed"]

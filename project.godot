@@ -15,9 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="LudumDare46alex457"
+config/name="Grow"
 run/main_scene="res://Map/Map.tscn"
-config/icon="res://icon.png"
+config/icon="res://Images/icon.png"
 
 [display]
 
@@ -49,3 +49,4 @@ move_down={
 [rendering]
 
 environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=false

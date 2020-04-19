@@ -18,3 +18,10 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 60, 60 )
 format = 1
 tile_data = PoolIntArray( 65535, 2, 0, 0, 0, 0, 1, 2, 0, 131071, 2, 0, 65536, 2, 0, 65537, 2, 0 )
+
+[node name="Animations" type="Control" parent="ActualGrid"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="EffectPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0

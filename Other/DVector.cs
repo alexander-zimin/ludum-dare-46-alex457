@@ -21,7 +21,7 @@ public struct DVector : IEquatable<DVector>
         return new DVector((int)v.x, (int)v.y);
     }
 
-    public List<DVector> GetNeighbours() {
+    public List<DVector> Get8Neighbours() {
         return new List<DVector>() {
             new DVector(X-1, Y),
             new DVector(X+1, Y),
@@ -29,6 +29,14 @@ public struct DVector : IEquatable<DVector>
             new DVector(X-1, Y-1),
             new DVector(X+1, Y+1),
             new DVector(X+1, Y-1),
+            new DVector(X, Y-1),
+            new DVector(X, Y+1)
+        };
+    }
+    public List<DVector> Get4Neighbours() {
+        return new List<DVector>() {
+            new DVector(X-1, Y),
+            new DVector(X+1, Y),
             new DVector(X, Y-1),
             new DVector(X, Y+1)
         };

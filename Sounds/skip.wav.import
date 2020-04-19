@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/skip.wav-4ca1d2ff37aaabca1bf53437ef63c00e.sample"
+
+[deps]
+
+source_file="res://Sounds/skip.wav"
+dest_files=[ "res://.import/skip.wav-4ca1d2ff37aaabca1bf53437ef63c00e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

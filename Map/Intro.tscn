@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/BaseTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Map/Intro.cs" type="Script" id=2]
+[ext_resource path="res://Fonts/TitleFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/BaseFont.tres" type="DynamicFont" id=4]
+
+[node name="Intro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VSplit" type="VBoxContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Panel/VSplit"]
+margin_right = 1024.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 0, 300 )
+custom_fonts/font = ExtResource( 3 )
+text = "Grow!"
+align = 1
+valign = 1
+
+[node name="IntroCenter" type="CenterContainer" parent="Panel/VSplit"]
+margin_top = 304.0
+margin_right = 1024.0
+margin_bottom = 504.0
+rect_min_size = Vector2( 0, 200 )
+
+[node name="Intro" type="RichTextLabel" parent="Panel/VSplit/IntroCenter"]
+margin_left = 212.0
+margin_right = 812.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 600, 200 )
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Welcome! Thanks for trying out my game.
+
+In [color=green]Grow[/color] you grow the root system of a small plant that tries to become a big tree. It is a mixture of a clicker and an exploration games.
+
+You can grow into the areas next to the existing roots. Seek for energy sources, but be wary - the more you grow the more energy you spend per each turn! And don't forget to grow your plant when you have enough energy.
+
+You will fail at first, but don't be afraid to restart and apply what you have learned in the new game."
+text = "Welcome! Thanks for trying out my game.
+
+In Grow you grow the root system of a small plant that tries to become a big tree. It is a mixture of a clicker and an exploration games.
+
+You can grow into the areas next to the existing roots. Seek for energy sources, but be wary - the more you grow the more energy you spend per each turn! And don't forget to grow your plant when you have enough energy.
+
+You will fail at first, but don't be afraid to restart and apply what you have learned in the new game."
+scroll_active = false
+
+[node name="ButtonCenter" type="CenterContainer" parent="Panel/VSplit"]
+margin_top = 508.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+
+[node name="OK" type="Button" parent="Panel/VSplit/ButtonCenter"]
+margin_left = 462.0
+margin_top = 21.0
+margin_right = 562.0
+margin_bottom = 71.0
+rect_min_size = Vector2( 100, 50 )
+text = "Got it!"
+[connection signal="pressed" from="Panel/VSplit/ButtonCenter/OK" to="." method="_on_OK_pressed"]

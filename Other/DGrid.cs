@@ -52,7 +52,7 @@ public class DGrid
         while(toVisit.Count > 0) {
             var next = toVisit.Dequeue();
             visitedCells.Add(next);
-            foreach(var neighbor in next.GetNeighbours()) {
+            foreach(var neighbor in next.Get4Neighbours()) {
                 if(!states.ContainsKey(neighbor) 
                     || visitedCells.Contains(neighbor)
                     || !TileTypesHelper.IsFilled((TileType)states[neighbor]))
